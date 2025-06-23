@@ -1,0 +1,8 @@
+name: countries_app
+
+services:
+  countries_frontend:
+    container_name: countries_frontend_container
+    build: .
+    ports:
+      - '80:80'

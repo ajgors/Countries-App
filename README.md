@@ -1,13 +1,13 @@
 # Countries app
 
-## Launching application
+## Launching the Application
 
 Note: Make sure you have Node.js and npm installed on your system before starting
 
-To run the application locally, follow these steps:
+### Running application locally
 
 1. Navigate to the main project directory.
-2. Install the dependencies
+2. Install the dependencies.
 
 ```
 npm install
@@ -19,4 +19,15 @@ npm install
 npm run dev
 ```
 
-3. Once started, the app will be available at: localhost:5173
+4. Once started, the app will be available at: localhost:5173.
+
+### Running the App with Docker Compose
+
+1. Navigate to the main project directory.
+2. Build and start the app:
+
+```
+docker compose up --build
+```
+
+3. Once started, the app will be available at: localhost:80.
