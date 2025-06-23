@@ -2,9 +2,9 @@
 
 ## Launching the Application
 
-Note: Make sure you have Node.js and npm installed on your system before starting
-
 ### Running application locally
+
+Note: Make sure you have Node.js and npm installed on your system before starting
 
 1. Navigate to the main project directory.
 2. Install the dependencies.
