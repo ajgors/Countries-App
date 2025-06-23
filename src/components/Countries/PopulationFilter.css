@@ -1,0 +1,41 @@
+.population-form {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+}
+
+.input-group label {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    padding: 10px 14px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #4dabf7;
+    box-shadow: 0 0 6px rgba(77, 171, 247, 0.3);
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    .population-form {
+        flex-direction: column;
+    }
+}

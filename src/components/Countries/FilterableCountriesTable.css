@@ -1,0 +1,25 @@
+.countries-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.countries-inner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+    .countries-container {
+        margin: 0;
+    }
+
+    .countries-inner-container {
+        flex-direction: column;
+    }
+}
