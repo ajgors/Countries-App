@@ -1,5 +1,6 @@
 import Button from '@components/Button';
 import { useMemo, useState } from 'react';
+import useMeasure from 'react-use-measure';
 import { FixedSizeList, type ListChildComponentProps } from 'react-window';
 import { CountryRow } from './CountryRow';
 
@@ -13,6 +14,7 @@ type SortDirection = 'asc' | 'desc';
 export function CountryTable({ countries }: Props) {
     const [sortColumn, setSortColumn] = useState<SortColumn | null>(null);
     const [sortDirection, setSortDirection] = useState<SortDirection>('asc');
+    const [ref, { height, width }] = useMeasure();
 
     const toggleSort = (column: SortColumn) => {
         if (sortColumn === column) {
@@ -133,15 +135,19 @@ export function CountryTable({ countries }: Props) {
                     <div style={{ flex: 1, textAlign: 'center' }}>flag</div>
                 </div>
 
-                <FixedSizeList
-                    height={500}
-                    width={'100%'}
-                    itemSize={60}
-                    itemCount={sortedCountries.length}
-                    itemData={sortedCountries}
-                >
-                    {Row}
-                </FixedSizeList>
+                <div ref={ref} style={{ height: '70vh', width: '100%' }}>
+                    {height > 0 && width > 0 && (
+                        <FixedSizeList
+                            height={height}
+                            width={width}
+                            itemSize={60}
+                            itemCount={sortedCountries.length}
+                            itemData={sortedCountries}
+                        >
+                            {Row}
+                        </FixedSizeList>
+                    )}
+                </div>
             </div>
         </div>
     );
